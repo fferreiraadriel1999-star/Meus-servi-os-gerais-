@@ -1,6 +1,7 @@
-{"name""ServiMais BH",
+{"name""
+ServiMais BH",
   "short_name": "ServiMais",
-  "start_url": "./index.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#111111",
@@ -8,12 +9,14 @@
   "description": "Solicite serviços e orçamentos em Belo Horizonte",
   "icons": [
     {
-      "src": "./icon-192.png",
+      "src": "./icon-192(1).png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "./icon-512.png",
+      "src": "./icon-512(1).png",
       "sizes": "512x512",
       "type": "image/png"
     }
+  ]
+}
