@@ -1,5 +1,7 @@
-{"name""
-ServiMais BH",
+
+
+{
+  "name": "ServiMais BH",
   "short_name": "ServiMais",
   "start_url": "./",
   "scope": "./",
