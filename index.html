@@ -49,9 +49,13 @@ footer{text-align:center;padding:20px;color:#777;font-size:12px}
 </div>
 <div class="card"><h2>ServiMais BH</h2><p>Serviço de qualidade, com facilidade e confiança.</p><p>Atendimento em Belo Horizonte e região.</p></div>
 </main><footer>ServiMais BH • Protótipo inicial</footer>
-<script>
-function filtrar(){let q=document.getElementById('busca').value.toLowerCase();document.querySelectorAll('.service').forEach(s=>s.style.display=s.innerText.toLowerCase().includes(q)?'block':'none')}
-function orcamento()
+<script>function filtrar(){
+  let q = document.getElementById('busca').value.toLowerCase();
+  document.querySelectorAll('.service').forEach(s => {
+    s.style.display = s.innerText.toLowerCase().includes(q) ? 'block' : 'none';
+  });
+}
+
 function orcamento(){
   const n = document.getElementById('nome').value;
   const t = document.getElementById('tipo').value;
@@ -64,12 +68,8 @@ Serviço: ${t}
 Detalhes: ${d}
 Bairro: ${b}`;
 
-  const telefone = '5531990190708';
-  const url = 'https://api.whatsapp.com/send?phone=' + telefone + '&text=' + encodeURIComponent(msg);
+  const url = 'https://wa.me/5531990190708?text=' + encodeURIComponent(msg);
 
-  window.location.href = url;
-}
-
-}
+  window.location.assign(url);
 </script>
 </body></html>
