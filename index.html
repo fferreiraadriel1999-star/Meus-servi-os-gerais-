@@ -53,10 +53,25 @@ footer{text-align:center;padding:20px;color:#777;font-size:12px}
 function filtrar(){let q=document.getElementById('busca').value.toLowerCase();document.querySelectorAll('.service').forEach(s=>s.style.display=s.innerText.toLowerCase().includes(q)?'block':'none')}
 function orcamento()
 function orcamento(){
+function orcamento(){
   let n = document.getElementById('nome').value;
   let t = document.getElementById('tipo').value;
   let d = document.getElementById('detalhes').value;
   let b = document.getElementById('bairro').value;
+
+  let msg = `Olá! Quero um orçamento pelo ServiMais BH.
+Nome: ${n}
+Serviço: ${t}
+Detalhes: ${d}
+Bairro: ${b}`;
+
+  let telefone = '5531990190708';
+  let url = 'https://wa.me/' + telefone + '?text=' + encodeURIComponent(msg);
+
+  window.open(url, '_blank');
+}
+
+  
 
   let msg = `Olá! Quero um orçamento pelo ServiMais BH.
 Nome: ${n}
