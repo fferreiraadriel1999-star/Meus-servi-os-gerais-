@@ -51,7 +51,24 @@ footer{text-align:center;padding:20px;color:#777;font-size:12px}
 </main><footer>ServiMais BH • Protótipo inicial</footer>
 <script>
 function filtrar(){let q=document.getElementById('busca').value.toLowerCase();document.querySelectorAll('.service').forEach(s=>s.style.display=s.innerText.toLowerCase().includes(q)?'block':'none')}
-function orcamento(){let n=document.getElementById('nome').value,t=document.getElementById('tipo').value,d=document.getElementById('detalhes').value,b=document.getElementById('bairro').value;
+function orcamento(){let n=function orcamento(){
+  let n = document.getElementById('nome').value;
+  let t = document.getElementById('tipo').value;
+  let d = document.getElementById('detalhes').value;
+  let b = document.getElementById('bairro').value;
+
+  let msg = `Olá! Quero um orçamento pelo ServiMais BH.
+Nome: ${n}
+Serviço: ${t}
+Detalhes: ${d}
+Bairro: ${b}`;
+
+  window.open(
+    'https://wa.me/5531990190708?text=' + encodeURIComponent(msg),
+    '_blank'
+  );
+}
+
 let msg=`Olá! Quero um orçamento pelo ServiMais BH.%0A Nome: ${n}%0A Serviço: ${t}%0A Detalhes: ${d}%0A Bairro: ${b}`;
 window.open('https://wa.me/5531990190708?text='+encodeURIComponent(msg),'_blank');
 }
